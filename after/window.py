@@ -24,7 +24,7 @@ class GameWindow():
     def close(self):
         self.window.close()
 
-    def make_turtle(self, shape, color, stretch, pos):
+    def make_turtle(self, shape='classic', color='white', stretch={'width':1, 'height':1}, pos={'x':0, 'y':0}):
         ''' creates a turtle and sets initial position '''
 
         turt = turtle.Turtle()
@@ -53,8 +53,9 @@ class GameWindow():
 
         for row in range(shape['row']):
             for col in range(shape['col']):
+                gridValue = self.grid.get({'row': row, 'col': col})
                 self.turtle.goto(offsets['x']+ col * tileSize, offsets['y']+row * tileSize)
-                self.turt.dot(tileSize-5, colors[self.grid.get(row, col)])
+                self.turt.dot(tileSize-5, colors[gridValue])
                 
 
         
