@@ -1,3 +1,6 @@
+Natalie Lunbeck
+Emerson Wright
+
 # Project 4: Refactoring
 
 Due date: Nov 16, 2021
