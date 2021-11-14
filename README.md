@@ -1,4 +1,5 @@
 Natalie Lunbeck
+
 Emerson Wright
 
 # Project 4: Refactoring
