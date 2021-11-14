@@ -31,7 +31,7 @@ class GameWindow():
         turt.speed(0)    # Speed of animation, 0 is max
         turt.shape(shape)
         turt.color(color)
-        turt.shapesize(stretch['width'], stretch['length']) 
+        turt.shapesize(stretch['width'], stretch['height']) 
         turt.penup()
         turt.goto(pos['x'], pos['y']) # Start position
         self.turt = turt
@@ -53,10 +53,12 @@ class GameWindow():
 
         for row in range(shape['row']):
             for col in range(shape['col']):
-                gridValue = self.grid.get({'row': row, 'col': col})
-                self.turtle.goto(offsets['x']+ col * tileSize, offsets['y']+row * tileSize)
+                indeces = {'row': row, 'col': col}
+                gridValue = self.grid.getTileValue(indeces)
+                self.goto(self.grid.getCoordinates(indeces))
                 self.turt.dot(tileSize-5, colors[gridValue])
-                
+
+     
 
         
 
