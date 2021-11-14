@@ -1,0 +1,10 @@
+Getting rid of select row/col by text input in main function true loop
+
+make window class 
+
+Diagonal win check doesnt work
+
+Classes:
+Window Class : create window and stoore 
+Grid Class: 
+Game Class: Contains main function, play function
