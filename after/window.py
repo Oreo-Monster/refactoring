@@ -40,27 +40,7 @@ class GameWindow():
         self.turt.goto(pos['x'], pos['y'])
         self.turt.down()
 
-<<<<<<< Updated upstream
-    def draw_grid(self):
-        ''' draws a grid at x, y with a specific tile_size '''
-        
-        offsets = self.grid.getOffsets()
-        tileSize = self.grid.getTileSize()
-        shape = self.grid.getShape()
-        colors = {1: 'red', 2: 'yellow', 0: 'white'}
-        self.goto(offsets)
-
-        for row in range(shape['row']):
-            for col in range(shape['col']):
-                indeces = {'row': row, 'col': col}
-                gridValue = self.grid.getTileValue(indeces)
-                self.goto(self.grid.getCoordinates(indeces))
-                self.turt.dot(tileSize-5, colors[gridValue])
-
-     
-=======
  
->>>>>>> Stashed changes
 
         
 

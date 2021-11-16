@@ -1,7 +1,7 @@
 import turtle, numpy as np
 
 class Grid:
-    def __init__(self, shape={'row':5, 'col':7}, offset={'x':-150, 'y':0}, tile_size=50):
+    def __init__(self, shape={'row':5, 'col':7}, offset={'x':-150, 'y':-50}, tile_size=50):
         self.grid = np.zeros((shape['row'], shape['col']))
         self.offset = offset
         self.tile_size = tile_size

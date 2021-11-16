@@ -15,10 +15,10 @@ class Connect4Window(GameWindow):
         shape = self.grid.getShape()
         colors = {1: 'red', 2: 'yellow', 0: 'white'}
         self.goto(offsets)
-
         for row in range(shape['row']):
             for col in range(shape['col']):
-                gridValue = self.grid.get({'row': row, 'col': col})
-                self.turtle.goto(offsets['x']+ col * tileSize, offsets['y']+row * tileSize)
+                gridValue = self.grid.getTileValue({'row': row, 'col': col})
+                pos = {'x':offsets['x']+ col * tileSize, 'y':offsets['y']+row * tileSize}
+                self.goto(pos)
                 self.turt.dot(tileSize-5, colors[gridValue])
                 

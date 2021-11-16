@@ -1,10 +1,10 @@
 from grid import Grid
-from window import GameWindow
+from connect4window import Connect4Window
 
 class Game:
     def __init__(self):
         self.grid = Grid()
-        self.window = GameWindow(self.play, self.grid)
+        self.window = Connect4Window(on_click=self.play, grid=self.grid)
         self.window.make_turtle()
         self.window.draw_grid()
         self.turn = 1
