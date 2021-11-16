@@ -2,7 +2,7 @@ import turtle
 
 class GameWindow():
     
-    def __init__(self, on_click, grid,name="Connect 4", color="light sky blue", shape={'width':800, 'height':600}):
+    def __init__(self, name, color, shape):
         self.name = name
         self.color = color
         self.shape = shape
@@ -11,9 +11,7 @@ class GameWindow():
         self.window.bgcolor(color)
         self.window.setup(shape['width'], shape['height'])
         self.window.tracer(0)
-        self.window.onclick(on_click)
         self.turt = None
-        self.grid = grid
 
     def update(self):
         self.window.update()
@@ -42,6 +40,7 @@ class GameWindow():
         self.turt.goto(pos['x'], pos['y'])
         self.turt.down()
 
+<<<<<<< Updated upstream
     def draw_grid(self):
         ''' draws a grid at x, y with a specific tile_size '''
         
@@ -59,6 +58,9 @@ class GameWindow():
                 self.turt.dot(tileSize-5, colors[gridValue])
 
      
+=======
+ 
+>>>>>>> Stashed changes
 
         
 
