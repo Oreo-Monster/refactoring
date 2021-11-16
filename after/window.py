@@ -33,6 +33,7 @@ class GameWindow():
         turt.penup()
         turt.goto(pos['x'], pos['y']) # Start position
         self.turt = turt
+        return turt
 
     def goto(self, pos):
         ''' moves the turtle to x, y '''
