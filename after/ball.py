@@ -3,7 +3,7 @@ import turtle
 
 class Ball:
     # implements a Pong game ball
-
+    #hi
     def __init__(self, turtle, vel={'x':.0925, 'y':.0925},pos={'x':0, 'y':0}, ybounds={'min':-290, 'max':290}):
         ''' intializes a ball with default direction and position '''
         self.turt = turtle
