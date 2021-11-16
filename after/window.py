@@ -29,7 +29,7 @@ class GameWindow():
         turt.speed(0)    # Speed of animation, 0 is max
         turt.shape(shape)
         turt.color(color)
-        turt.shapesize(stretch['width'], stretch['height']) 
+        turt.shapesize(stretch['height'], stretch['width']) 
         turt.penup()
         turt.goto(pos['x'], pos['y']) # Start position
         self.turt = turt
@@ -44,6 +44,7 @@ class GameWindow():
     def setupKeys(self, keyBindings={}):
         # value will be function, key will be keyboard key
         for key, func in keyBindings.items():
+            print(f'func = {func}\nkey={key}')
             self.window.onkeypress(func, key)
  
 

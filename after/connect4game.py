@@ -5,9 +5,11 @@ class Connect4Game:
     def __init__(self):
         self.grid = Grid()
         self.window = Connect4Window(self.play, self.grid)
-        self.window.draw_grid(self.grid)
-        self.turn = 1
         self.window.make_turtle()
+        self.window.draw_grid()
+        self.turn = 1
+        self.gameOver = False
+        
     
     def check_inline_win(self, fragment):
         ''' checks the winner in the grid
@@ -45,7 +47,7 @@ class Connect4Game:
                 return True
 
         # check diagonal
-        diagonals = self.grid.getDiagonals()
+        diagonals = self.grid.getDiagonal()
         for diag in diagonals:
             if diag.shape[0] >=4:
                 if self.check_inline_win(diag):
@@ -65,6 +67,13 @@ class Connect4Game:
 
         if self.check_win(): #Only need to check 
             print(f"player {self.turn} won")
+            self.gameOver = True
 
         self.switchTurn()
 
+
+    def gameLoop(self):
+        while not self.gameOver:
+            self.window.draw_grid()
+            self.window.update()
+            self.window.listen()

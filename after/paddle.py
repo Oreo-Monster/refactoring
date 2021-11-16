@@ -18,6 +18,12 @@ class Paddle:
             self.pos['y'] -= self.vel
         self.turt.sety(self.pos['y'])
 
+    def up(self):
+        self.move('up')
+
+    def down(self):
+        self.move('down')
+
     def getPos(self):
         return self.pos
 
