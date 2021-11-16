@@ -5,12 +5,12 @@ data: 9/22/2020
 course: CS151 fall
 description: 
 '''
-from game import Game
+from connect4game import Connect4Game
 
 def main():
     ''' the main function where the game events take place '''
 
-    game = Game()
+    game = Connect4Game()
     game.gameLoop()
 
     

@@ -40,6 +40,10 @@ class GameWindow():
         self.turt.goto(pos['x'], pos['y'])
         self.turt.down()
 
+    def setupKeys(self, keyBindings={}):
+        # value will be function, key will be keyboard key
+        for key, func in keyBindings.items():
+            self.window.onkeypress(func, key)
  
 
         
