@@ -44,7 +44,6 @@ class GameWindow():
     def setupKeys(self, keyBindings={}):
         # value will be function, key will be keyboard key
         for key, func in keyBindings.items():
-            print(f'func = {func}\nkey={key}')
             self.window.onkeypress(func, key)
  
 
