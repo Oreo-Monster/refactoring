@@ -11,7 +11,8 @@ from pong import Pong
 
 
 def main():
-    Pong()
+    pong = Pong()
+    pong.gameLoop()
 
 
 

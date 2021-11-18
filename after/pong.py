@@ -19,7 +19,6 @@ class Pong:
         self.window.setupKeys(keyBinds)
         self.window.update()
         self.window.listen()
-        self.gameLoop()
         
 
 
