@@ -21,6 +21,10 @@ jobs:
       run: |
         pip install pytest
         pip install turtle
+        pip install numpy
+        pip install matplotlib
+        import matplotlib
+        matplotlib.use('Agg')
         export PYTHONPATH=src
         cd after
         pytest
