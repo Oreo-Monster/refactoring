@@ -19,9 +19,6 @@ jobs:
         python -m pip install --upgrade pip
     - name: Test with pytest
       run: |
-        import os
-        pip install matplotlib
-        matplotlib.use('TkAgg')
         pip install pytest
         pip install turtle
         pip install numpy
