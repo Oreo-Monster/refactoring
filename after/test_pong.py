@@ -2,7 +2,9 @@ import turtle
 from ball import Ball
 from window import GameWindow
 from pong import Pong
-
+import os
+import matplotlib
+matplotlib.use('TkAgg')
 def test_ball():
     pong = Pong()
     ball = pong.ball
