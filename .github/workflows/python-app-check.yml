@@ -20,14 +20,16 @@ jobs:
         pip install pylint
     - name: Analysing the code with pylint
       run: |
-        export PYTHONPATH=src/after
+        export PYTHONPATH=src
+        cd after
         ls
         pylint `ls -R|grep .py$|xargs`
     - name: Test with pytest
       run: |
         pip install pytest
         ls
-        export PYTHONPATH=src/after
+        export PYTHONPATH=src
+        cd after
         ls
         pytest
     - name: Generate coverage report
