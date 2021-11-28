@@ -20,10 +20,9 @@ jobs:
     - name: Test with pytest
       run: |
         pip install pytest
-        ls
+        pip install turtle
         export PYTHONPATH=src
         cd after
-        ls
         pytest
     - name: Generate coverage report
       run: |
